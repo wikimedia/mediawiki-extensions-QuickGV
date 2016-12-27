@@ -208,7 +208,7 @@ class QuickGV {
 			$table_html[] = sprintf('<tr><th style="white-space:nowrap;">%s</th><td style="text-align:left;">%s</td></tr>', wfMessage('filepath'), $svgurl);
 			$table_html[] = sprintf('<tr><th style="white-space:nowrap;">%s</th><td style="text-align:left;">%s</td></tr>', wfMessage('filesize')->plain(), $size);
 			$table_html[] = sprintf('<tr><th style="white-space:nowrap;">%s</th><td style="text-align:left;">%s</td></tr>', wfMessage('filemtime')->plain(), date('Y-m-d H:i:s',$mtime));
-			$table_html[] = sprintf('<tr><th style="white-space:nowrap;">%s</th><td style="text-align:left;">%.3f %s</td></tr>', wfMessage('exectime')->plain(), $elapsed, wfMessage('seconds')->plain());
+			$table_html[] = sprintf('<tr><th style="white-space:nowrap;">%s</th><td style="text-align:left;">%s</td></tr>', wfMessage('exectime')->plain(), wfMessage('seconds', round($elapsed, 3))->plain());
 			$table_html[] = sprintf('<tr><th style="white-space:nowrap;">%s</th><td style="text-align:left;">%s</td></tr>', wfMessage('md5sum')->plain(), $sum_curr);
 			$table_html[] = sprintf('<tr><th style="white-space:nowrap;">%s</th><td style="text-align:left;">%s</td></tr>', wfMessage('graphviz-path')->plain(), $dotcmd);
 			$table_html[] = sprintf('<tr><th style="white-space:nowrap;">%s</th><td style="text-align:left;">%s</td></tr>', wfMessage('graphviz-ver')->plain(), $verstr);
