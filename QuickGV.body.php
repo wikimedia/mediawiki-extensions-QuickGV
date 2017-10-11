@@ -70,7 +70,10 @@ class QuickGV {
 		if ($dotcmd=='') return self::showError();
 
 		// PHP 環境檢查
-		$phpcmd = self::findExecutable('php', self::PHP_PATH);
+		if (PHP_OS=='WINNT')
+		     $phpcmd = dirname(PHP_BINARY) . "\php.exe"; //php-cgi.exe might be used but we want php.exe
+		else $phpcmd = self::findExecutable('php', self::PHP_PATH);   
+		
 		if ($phpcmd=='') return self::showError();
 
 		// $in 上限管制
