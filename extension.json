@@ -4,6 +4,7 @@
 	"author": "[https://github.com/virus-warnning 吳政璋]",
 	"url": "https://www.mediawiki.org/wiki/Extension:QuickGV",
 	"descriptionmsg": "quickgv-desc",
+	"license-name": "Apache-2.0",
 	"type": "parserhook",
 	"requires": {
 		"MediaWiki": ">= 1.25"
