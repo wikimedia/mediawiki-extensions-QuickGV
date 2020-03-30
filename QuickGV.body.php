@@ -93,7 +93,7 @@ class QuickGV {
 		$showdot  = self::getParam($param, 'showdot' , 'false');
 		//return '<pre>' . print_r($param, true) . '</pre>';
 
-		$prefix = $parser->mTitle;
+		$prefix = $parser->getTitle();
 		$prefix = str_replace(array('\\','/',' '), '_', $prefix); // TODO: 搬去 self::getSafeName()
 
 		$imgdir = sprintf('%s/images/quickgv', $IP);
