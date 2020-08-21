@@ -12,6 +12,7 @@
 	"MessagesDirs": {
 		"QuickGV": ["i18n"]
 	},
+	"callback": "QuickGV::registerExtension",
 	"AutoloadClasses": {
 		"QuickGV": "QuickGV.body.php"
 	},

@@ -23,21 +23,20 @@ class QuickGV {
 	private static $version;
 
 	/**
+	 * Set version
+	 */
+	public static function registerExtension() {
+		$all = ExtensionRegistry::getInstance()->getAllThings();
+		self::$version = $all['QuickGV']['version'];
+	}
+
+	/**
 	 * 掛載點設定 (由 MediaWiki 觸發)
 	 *
 	 * @since 0.1.0
 	 * @param $parser MediaWiki 的語法處理器
 	 */
 	public static function init(&$parser) {
-		// 取得版本字串
-		global $wgExtensionCredits;
-		foreach ($wgExtensionCredits['parserhook'] as $ext) {
-			if ($ext['name']==='QuickGV') {
-				self::$version = $ext['version'];
-				break;
-			}
-		}
-
 		// 設定函數鉤
 		$parser->setHook('quickgv', array('QuickGV', 'render'));
 
