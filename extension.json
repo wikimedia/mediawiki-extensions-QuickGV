@@ -10,7 +10,7 @@
 		"MediaWiki": ">= 1.25"
 	},
 	"MessagesDirs": {
-		"QuickGV": ["i18n"]
+		"QuickGV": [ "i18n" ]
 	},
 	"callback": "QuickGV::registerExtension",
 	"AutoloadClasses": {
