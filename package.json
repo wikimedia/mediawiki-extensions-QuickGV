@@ -1,4 +1,5 @@
 {
+	"name": "QuickGV",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
